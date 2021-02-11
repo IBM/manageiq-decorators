@@ -29,8 +29,8 @@ class ManageIQ::Providers::StorageManagerDecorator < MiqDecorator
         :tooltip => n_("%{number} Cloud Volume", "%{number} Cloud Volumes", t) % {:number => t}
       }
       icon[:top_right] = {
-        :text    => t = cloud_volume_snapshots.size,
-        :tooltip => n_("%{number} Cloud Volume Snapshot", "%{number} Cloud Volume Snapshots", t) % {:number => t}
+        :text    => t = storage_resources.size,
+        :tooltip => n_("%{number} Storage Pools", "%{number} Storage Pools", t) % {:number => t}
       }
     elsif supports_object_storage?
       icon[:top_left] = {
